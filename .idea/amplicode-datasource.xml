@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AmplicodeJpaDataSourceConfig">
+    <data-sources>
+      <data-source id="4c755c1f-3838-4ed1-bd04-d1a7c93205a2" name="amplicode-hero" url="jdbc:postgresql://localhost/amplicode-hero" driverClass="org.postgresql.Driver" />
+    </data-sources>
+  </component>
+</project>

@@ -15,6 +15,7 @@ repositories {
 	mavenCentral()
 }
 
+extra["springCloudVersion"] = "2022.0.4"
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -23,8 +24,14 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.cloud:spring-cloud-starter-config")
 }
 
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+	dependencyManagement {
+		imports {
+			mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+		}
+	}

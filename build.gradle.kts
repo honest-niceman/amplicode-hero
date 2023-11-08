@@ -32,6 +32,7 @@ dependencies {
     implementation("io.zipkin.reporter2:zipkin-reporter-brave")
     implementation("org.springframework.cloud:spring-cloud-stream")
     implementation("org.springframework.cloud:spring-cloud-starter-stream-kafka")
+    implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
 }
 
 tasks.withType<Test> {

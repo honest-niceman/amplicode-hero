@@ -37,6 +37,8 @@ dependencies {
     implementation("org.springframework.security:spring-security-ldap")
     implementation("org.liquibase:liquibase-core")
     implementation("org.flywaydb:flyway-core")
+    compileOnly("org.projectlombok:lombok:1.18.24")
+    annotationProcessor("org.projectlombok:lombok:1.18.24")
 }
 
 tasks.withType<Test> {

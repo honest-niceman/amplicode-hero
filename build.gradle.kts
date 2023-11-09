@@ -45,6 +45,14 @@ dependencies {
     implementation("org.modelmapper:modelmapper:3.1.1")
     implementation("org.springframework.data:spring-data-envers")
     implementation("io.hypersistence:hypersistence-utils-hibernate-60:3.1.1")
+    implementation("com.blazebit:blaze-persistence-core-api-jakarta:1.6.9")
+    runtimeOnly("com.blazebit:blaze-persistence-core-impl-jakarta:1.6.9")
+    implementation("com.blazebit:blaze-persistence-entity-view-api-jakarta:1.6.9")
+    runtimeOnly("com.blazebit:blaze-persistence-entity-view-impl-jakarta:1.6.9")
+    runtimeOnly("com.blazebit:blaze-persistence-entity-view-processor-jakarta:1.6.9")
+    runtimeOnly("com.blazebit:blaze-persistence-integration-hibernate-6.2:1.6.9")
+    runtimeOnly("com.blazebit:blaze-persistence-integration-entity-view-spring-6.0:1.6.9")
+    implementation("com.blazebit:blaze-persistence-integration-spring-data-3.1:1.6.9")
 }
 
 tasks.withType<Test> {

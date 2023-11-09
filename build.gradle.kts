@@ -36,6 +36,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-oauth2-authorization-server")
     implementation("org.springframework.security:spring-security-ldap")
     implementation("org.liquibase:liquibase-core")
+    implementation("org.flywaydb:flyway-core")
 }
 
 tasks.withType<Test> {

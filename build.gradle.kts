@@ -44,6 +44,7 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok-mapstruct-binding:0.2.0")
     implementation("org.modelmapper:modelmapper:3.1.1")
     implementation("org.springframework.data:spring-data-envers")
+    implementation("io.hypersistence:hypersistence-utils-hibernate-60:3.1.1")
 }
 
 tasks.withType<Test> {

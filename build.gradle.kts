@@ -42,6 +42,7 @@ dependencies {
     compileOnly("org.mapstruct:mapstruct:1.5.3.Final")
     annotationProcessor("org.mapstruct:mapstruct-processor:1.5.3.Final")
     annotationProcessor("org.projectlombok:lombok-mapstruct-binding:0.2.0")
+    implementation("org.modelmapper:modelmapper:3.1.1")
 }
 
 tasks.withType<Test> {

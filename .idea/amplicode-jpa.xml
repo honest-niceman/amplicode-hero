@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AmplicodeJpaIdeaProjectConfig" ddlActionDbType="postgres" newRepositoryParent="org.springframework.data.repository.history.RevisionRepository">
+  <component name="AmplicodeJpaIdeaProjectConfig" ddlActionDbType="postgres" newRepositoryParent="org.springframework.data.mongodb.repository.MongoRepository">
     <option name="defaultUnitInitialized" value="true" />
     <option name="renamerInitialized" value="true" />
     <option name="isSnapshotDb" value="false" />

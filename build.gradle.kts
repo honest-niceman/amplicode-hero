@@ -53,6 +53,7 @@ dependencies {
     runtimeOnly("com.blazebit:blaze-persistence-integration-hibernate-6.2:1.6.9")
     runtimeOnly("com.blazebit:blaze-persistence-integration-entity-view-spring-6.0:1.6.9")
     implementation("com.blazebit:blaze-persistence-integration-spring-data-3.1:1.6.9")
+    testImplementation("org.springframework.security:spring-security-test")
 }
 
 tasks.withType<Test> {

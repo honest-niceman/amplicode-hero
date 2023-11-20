@@ -2,6 +2,7 @@ package io.amplicode.amplicodehero.configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -16,9 +17,6 @@ public class WebSecurityConfiguration {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        //Authorize Requests
-        http.authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
-                .anyRequest().authenticated());
         //Headers management
         http.headers(Customizer.withDefaults());
         //Session management
@@ -29,6 +27,10 @@ public class WebSecurityConfiguration {
         http.anonymous(Customizer.withDefaults());
         //CSRF
         http.csrf(Customizer.withDefaults());
+        //Authorize Requests
+        http.authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
+                .requestMatchers(HttpMethod.GET, "/rest/path").permitAll()
+                .anyRequest().authenticated());
         return http.build();
     }
 

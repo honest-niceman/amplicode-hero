@@ -1,5 +1,7 @@
 package io.amplicode.amplicodehero.components;
 
+import io.amplicode.amplicodehero.jpa.entities.NewEntity;
+import io.amplicode.amplicodehero.mongo.MuMongoDBComponentRepository;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
@@ -7,13 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class NewComponent {
 
-    private final KafkaTemplate<String, String> stringKafkaTemplate;
+    private final MuMongoDBComponentRepository muMongoDBComponentRepository;
 
-    public NewComponent(KafkaTemplate<String, String> stringKafkaTemplate) {
-        this.stringKafkaTemplate = stringKafkaTemplate;
+    public NewComponent(MuMongoDBComponentRepository muMongoDBComponentRepository) {
+        this.muMongoDBComponentRepository = muMongoDBComponentRepository;
     }
 
-    @KafkaListener(topics = "topic", containerFactory = "stringListenerFactory")
     public void consumeString(String string) {
 
     }

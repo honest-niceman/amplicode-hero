@@ -33,6 +33,18 @@ public class MuMongoDBComponent {
     @Transient
     private String da;
 
+    @Field("ascxa")
+    @DBRef
+    private Ascxa ascxa;
+
+    public Ascxa getAscxa() {
+        return ascxa;
+    }
+
+    public void setAscxa(Ascxa ascxa) {
+        this.ascxa = ascxa;
+    }
+
     public String getDa() {
         return da;
     }

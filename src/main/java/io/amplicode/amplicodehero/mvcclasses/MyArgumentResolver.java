@@ -19,4 +19,5 @@ public class MyArgumentResolver implements HandlerMethodArgumentResolver {
                                   WebDataBinderFactory binderFactory) throws Exception {
         return null;
     }
+
 }

@@ -1,5 +1,7 @@
 package io.amplicode.amplicodehero.jpa.dtos;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import java.io.Serializable;
 import java.util.Objects;
 
